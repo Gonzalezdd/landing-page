@@ -1,36 +1,186 @@
-*{
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
-}
-header{
-    justify-content: space-between;
-    align-items: center;
-    display: flex;
-    background-color: rgb(99, 175, 109);
-    padding: 10px
-    
-    
+@import url("https://fonts.googleapis.com/css2?family=Kalnia:wght@100;200;300;400;500;600;700&display=swap");
 
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
 }
-body{
-    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+:root {
+  --fondonavbar: green;
+  --fondoprincipal: rgba(31, 61, 39, 0.432);
+  --fondocard: rgba(19, 117, 19, 0.979);
+  --fondosection: green;
+  --colorletra: rgb(12, 11, 11);
+  --colortitulo: rgb(7, 7, 7);
 }
 
-nav{
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    padding: 1rem;
+header {
+  justify-content: space-between;
+  align-items: center;
+  display: flex;
+  padding: 10px;
+}
+.bar_nav {
+  background-color: var(--fondonavbar); opacity: 0.8;
+  /* background: url(./asset/img/fondo_hojas.jpg); */
+  /* background: url(./asset/img/fondo_vegano2.jpg); */
+  /* background: url(./asset/img/fondo_hojas_verdes.jpg); */
+}
+body {
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  background-color: var(--fondoprincipal);
+  /* background: url(./asset/img/fondo_vegano2.jpg); */
+  /* background: url(./asset/img/fondo_hojas.jpg); */
+  /* background: url(./asset/img/fondo_hojas_verdes.jpg); */
+  background: url(./asset/img/fondo_color_verde.jpg);
+}
+
+nav {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 1rem;
 }
 
 ul a {
-    text-decoration: none;
-    color: rgb(250, 250, 250);
+  text-decoration: none;
+  color: var(--colorletra);
 }
 
 ul {
-    list-style: none;
-    display: flex;
-    gap: 30px;
+  list-style: none;
+  display: flex;
+  gap: 30px;
 }
+h1 {
+  text-align: center;
+  font-size: 50px;
+  font-family: "Lexend Deca", sans-serif;
+}
+
+.desc_principal {
+  /* display: flex;
+  align-items: center;
+  /* color: rgb(15, 14, 15); */
+  font: bold;
+  font-size: LARGE;
+  background-color: green; opacity: 0.8;
+  padding: 25px;
+  border-radius: 20px;
+  align-items: center; */
+  /* width: 800px;
+  height: 240px;
+  margin-top: 50px;
+  margin-bottom: 200px; */
+  color: rgb(7, 7, 7);
+  /* background-color: rgb(13, 182, 64); */
+  display: flex;
+  justify-content: center;
+  margin: 20px;
+  
+}
+.container {
+  display: flex;
+  /* flex-direction: column; */
+  justify-content: center;
+  /* align-items: center; */
+  /* height: 100vh; */
+
+  gap: 20px;
+}
+
+.card,
+.card_2,
+.card_3 {
+  /* background-color: var(--fondocard); */
+  background: url(./asset/img/fondo_hojas.jpg);
+  padding: 0.5rem;
+  padding-bottom: 1rem;
+  border-radius: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.4rem;
+}
+.card_3 img {
+  width: 300px;
+  height: 200px;
+}
+
+.card__img {
+  width: 300px;
+  border-radius: 0.8rem;
+}
+
+.card__info {
+  display: flex;
+  flex-direction: column;
+  padding: 0.5rem;
+  gap: 30px;
+}
+.card__user {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.user__title {
+  color: var(--colortitulo);
+  font-weight: bold;
+}
+.user__desc {
+  width: 280px;
+  height: 120px;
+  color: var(--colorletra);
+  font-weight: 600;
+}
+
+.btn {
+  padding: 1rem 2rem;
+  border-radius: 50px;
+  font-weight: 600;
+  border: none;
+  width: 100%;
+  text-align: center;
+  cursor: pointer;
+}
+.card__btns {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+
+.btn--secondary {
+  /* background: var(--fondonavbar); */
+  background-color: rgb(13, 182, 64);
+  color: var(--colorletra);
+}
+
+.btn--primary {
+  background-color: rgb(13, 182, 64);
+  /* background: var(--fondonavbar); */
+  color: var(--colorletra);
+}
+
+.footer-link a {
+  color: rgb(7, 7, 7);
+  background-color: rgb(13, 182, 64);opacity: 0.8;
+  display: flex;
+  justify-content: center;
+}
+
+
+@media(max-widht:800px){
+  .container {
+    flex-direction: column;
+ 
+  }
+}
+@media(max-widht:600px){
+  .container {
+    flex-direction: column;
+ 
+  }
+}
+
+
